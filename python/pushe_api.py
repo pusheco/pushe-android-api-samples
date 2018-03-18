@@ -1,26 +1,28 @@
 import requests
 import json
 
-def sendSingleNotification(token,pushid,title,content,packagename):
-    header = {
-        "Authorization": "Token " + token
+
+TOKEN = 'YOUR_TOKEN'
+
+headers = {
+    'Authorization': 'Token ' + TOKEN
+}
+
+data = {
+    'applications': ['YOUR_APPLICATION_ID', ],
+    'notification': {
+        'title': 'this is the title',
+        'content': 'this is the content',
     }
-    postdata ={
-       
-  "applications": [packagename],
-  "filter": {
-  "imei": [pushid]
-  },
-  "notification": {
-    "title": title,
-    "content": content
-  }
+}
 
-    } 
-    response = requests.post("https://panel.pushe.co/api/v1/notifications/",json=postdata, headers=header)
-    jdata = json.loads(response.text)
-    return jdata["applications"]
+response = requests.post(
+    'https://panel.pushe.co/api/v1/notifications/',
+    json=data,
+    headers=headers,
+)
 
-if __name__ == '__main__':
-    sendSingleNotification(token,pushid,title,content,packagename)
-      
+resp = json.loads(response.text)
+
+print(resp.status_code)
+print(resp.json())
