@@ -19,12 +19,12 @@ $data = array(
     "title" => "this is the title",
     "content" => "this is the content",
   ),
-  "filter": {
-    "imei": [
+  "filter" => array(
+    "imei" => [
       "1234567890123456",
       "pid_20aa-ba40-a0",
     ],
-  },
+  ),
 );
 $data_string = json_encode($data);
 
