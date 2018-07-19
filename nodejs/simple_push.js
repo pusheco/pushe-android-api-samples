@@ -1,27 +1,31 @@
 var request = require('request');
-   
 
-    var headers = {
-        'content-type': 'application/json','Authorization':'Token your_token','Accept':'application/json'
-    };
+var TOKEN = "YOUR_TOKEN"
 
-    var requestData = {
-        applications: ["com.example.test"],
-        notification: {
-            title: "عنوان پیام",
-            content: "محتوی پیام"
-        }
-        // ,"filter": {
-        //     "instance_id": [device_id]
-        // }
-    };
+var headers = {
+    'content-type': 'application/json',
+    'Authorization': 'Token ' + TOKEN,
+    'Accept':'application/json',
+};
 
-    request({
+var requestData = {
+    applications: ["YOUR_APPLICATION_ID"],
+    notification: {
+        title:"this is the title",
+        content: "this is the content",
+    }
+};
+
+request(
+    {
         url: "https://panel.pushe.co/api/v1/notifications/",
         json: true,
-        headers: headers,method:'POST',
+        headers: headers,
+        method:'POST',
         body: requestData
-    }, function(error, response, body) {
+    },
+    function(error, response, body) {
         console.log(response)
         resp.send("err: "+error+" body:"+body)
-    });
+    }
+);
