@@ -9,6 +9,7 @@ $data = array(
     "content" => "this is the content",
     "visibility" => true,
     "show_app" => true,
+    // "url" => "http://google.com" // set this link to open another url when user clicks on notification
   )
 );
 $data_string = json_encode($data);
