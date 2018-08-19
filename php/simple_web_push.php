@@ -7,12 +7,12 @@ $data = array(
   "notification" => array(
     "title" => "this is the title",
     "content" => "this is the content",
-    "visibility" => true,
-    "show_app" => true,
+    "visibility" => true,  // required
+    "show_app" => true,    // required
     // these are other fiels (ALL ARE OPTIONAL)
-    // "url" => "http://google.com", // set this link to open another url when user clicks on notification
-    // "icon" => "http://link_to_image.png",
-    // "image" => "http://link_to_image.png",
+    // "url" => "http://google.com",           // set this link to open another url when user clicks on notification
+    // "icon" => "http://link_to_image.png",   // some browsers may ignore this option
+    // "image" => "http://link_to_image.png",  // some browsers may ignore this option
   )
 );
 $data_string = json_encode($data);
