@@ -13,7 +13,7 @@ $data = array(
     "title" => "this is the title",
     "content" => "this is the content",
   )
-  );
+);
 
 $data_string = json_encode($data);
 
