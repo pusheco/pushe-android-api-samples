@@ -51,5 +51,3 @@ if ($status_code == 201) {
     // creating notification failed
     echo "failed!\n";
 }
-
-?>
