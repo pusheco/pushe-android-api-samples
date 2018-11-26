@@ -6,7 +6,7 @@ $data = array(
     "app_ids" => ["YOUR_APPLICATION_ID"],
     "data" => array(
         "title" => "This is a simlple push",
-        "content" => "All of your users will see message",
+        "content" => "All of your users will see me",
     ),
 );
 
