@@ -34,7 +34,6 @@ echo "==========\n";
 if ($status_code == 201) {
     echo "Success!\n";
 
-    // notification created
     $reponse_json = json_decode($reponse);
 
     if ($reponse_json->hashed_id) {
@@ -46,6 +45,5 @@ if ($status_code == 201) {
 
     echo "notification id: $reponse_json->wrapper_id\n";
 } else {
-    // creating notification failed
     echo "failed!\n";
 }
