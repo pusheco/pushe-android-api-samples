@@ -9,7 +9,7 @@ $data = array(
         "content" => "Only choosen users can see me",
     ),
     "filters" => array(
-        "pushe_id" => ["PUSHE_ID"],
+        "device_id" => ["DEVICE_ID"],
     ),
 );
 
