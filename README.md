@@ -1,10 +1,16 @@
 # Pushe Api Samples
 
-**These samples are for previous version of API, please avoid using v1 and switch to [recent version API (v2)][master]**
+## Important Note
+
+* **These samples are for previous version of API, please avoid using these samples and use [recent version of Pushe API (V2)][master]**
+* **API V1 is not developed any more, and new features will only be added to v2**
+* **API V1 will be deprecated by pushe (There is no exact date for deprecation yet)**
+
+---
 
 This repository contains a few sample codes for pushe API to kickstart your project.
 
-  * Documention for pushe API [docs.pushe.co/api_v1][api_v1]
+  * Documention for Pushe API (v1) [docs.pushe.co/api_v1][api_v1]
   * Obtain your token from [conosle.pushe.co][console]
 
 ## Contributing
