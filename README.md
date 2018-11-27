@@ -2,9 +2,9 @@
 
 **These samples are for previous version of API, please avoid using v1 and switch to [recent version API (v2)][master]**
 
-This repository contains a few sample codex for pushe API to kickstart your project.
+This repository contains a few sample codes for pushe API to kickstart your project.
 
-  * Documention for pushe API [docs.pushe.co/api_v1/][api_v1]
+  * Documention for pushe API [docs.pushe.co/api_v1][api_v1]
   * Obtain your token from [conosle.pushe.co][console]
 
 ## Contributing
