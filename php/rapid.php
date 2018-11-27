@@ -31,7 +31,7 @@ echo "status code => $status_code\n";
 echo "response => $reponse\n";
 echo "==========\n";
 
-if ($status_code == 200) {
+if ($status_code == 201) {
     echo "Success!\n";
 } else {
     echo "failed!\n";
