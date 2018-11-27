@@ -1,7 +1,17 @@
 # Pushe Api Samples
 
-در اینجا چند نمونه کد کار با سرویس پوشه قرار داده شده است، میتونه برای شروع کار با پوشه مفید باشه.
+**These samples are for previous version of API, please avoid using v1 and switch to [recent version API (v2)][master]**
 
-همچنین اگر نمونه کدهای خودتون رو به این مخزن اضافه کنید میتونه برای بقیه دوستان شما بسیار مفید باشه
+This repository contains a few sample codex for pushe API to kickstart your project.
+
+  * Documention for pushe API [docs.pushe.co/api_v1/][api_v1]
+  * Obtain your token from [conosle.pushe.co][console]
+
+## Contributing
+
+All Contributions are welcomed, please open a pull request to add your samples or open an issue if you find any bugs in current samples
 
 
+[api_v1]: https://pushe.co/docs/api_v1/
+[console]: https://console.pushe.co/
+[master]: https://github.com/pusheco/pushe-api-samples/
