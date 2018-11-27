@@ -38,7 +38,7 @@ if ($status_code == 201) {
     if ($reponse_json->hashed_id) {
         $report_url = "https://pushe.co/report?id=$reponse_json->hashed_id";
     } else {
-        $report_url = "no report url for free plan";
+        $report_url = "no report url for your plan";
     }
     echo "report_url: $report_url\n";
 
