@@ -1,6 +1,6 @@
 # Pushe Api Samples
 
-This repository contains a few sample codex for pushe API to kickstart your project.
+This repository contains a few sample codes for pushe API to kickstart your project.
 
   * Documention for pushe API [docs.pushe.co][1]
   * Obtain you token from [conosle.pushe.co][2]
