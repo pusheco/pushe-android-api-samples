@@ -3,7 +3,7 @@
 This repository contains a few sample codes for pushe API to kickstart your project.
 
   * Documention for pushe API [docs.pushe.co][api]
-  * Obtain you token from [conosle.pushe.co][console]
+  * Obtain your token from [conosle.pushe.co][console]
 
 If you haven't switched to new version of API yet, you can find samples for `v1` [here][api_v1].
 
