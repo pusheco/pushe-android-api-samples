@@ -33,25 +33,6 @@ func main() {
 	// Documentation :  (android) https://pushe.co/docs/api/#api_send_push_notification_to_single_users
 	// 					(web) https://pushe.co/docs/webpush-api/#api_send_push_notification_according_to_device_id
 	// ******************************************************
-	// **************** filtered by imei ********************
-	// ********************* For Android ********************
-	// ******************************************************
-	IMEIFilteredData := map[string]interface{}{
-		"app_ids": []string{"YOUR_APP_ID"}, // a list of app_id, like: [app_id_1 , ...] (compulsive)
-		// send notification to all my android(web) applications
-		// "app_ids":  []string{"__all__"}
-		"platform": 1, // optional for android,
-		"data": map[string]interface{}{
-			"title":   "This is a simple push",         // (compulsive)
-			"content": "All of your users will see me", // (compulsive)
-		},
-		"filters": map[string]interface{}{
-			"imei": []string{"212**********23"}, // filter user by imei key (deprecated)
-		},
-		// extra parameters on Documentation -> https://pushe.co/docs/api/#api_send_advance_notification
-	}
-
-	// ******************************************************
 	// **************** filtered by pushe_id ****************
 	// ********************* For Android ********************
 	// ******************************************************
@@ -94,7 +75,7 @@ func main() {
 
 	// Marshal returns the JSON encoding of reqData.
 	// Choices: IMEIFilteredData, DeviceIdFilteredData, PusheIdFilteredData
-	reqJSON, err := json.Marshal(IMEIFilteredData)
+	reqJSON, err := json.Marshal(DeviceIdFilteredData)
 
 	// check encoded json
 	if err != nil {

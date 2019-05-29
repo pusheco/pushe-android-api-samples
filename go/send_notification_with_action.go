@@ -32,7 +32,7 @@ func main() {
 
 	reqData := map[string]interface{}{
 		"app_ids":  []string{"YOUR_APP_ID"}, // a list of app_id, like: [app_id_1 , ...]
-		"platform": 1,                                  // optional for android,
+		"platform": 1,                       // optional for android,
 		// "platform": 2, for web (compulsive for web)
 		"data": map[string]interface{}{
 			"title":   "This is a simple push",         // (compulsive)
@@ -59,8 +59,9 @@ func main() {
 						"url":                 "",
 					},
 					"btn_content": "content",
-					"btn_icon":    "open_in_browser", // icons -> https://pushe.co/docs/api/#api_icon_notificaiton_table2
-					"btn_order":   0,
+					// "btn_icon" only support for Android
+					"btn_icon":  "open_in_browser", // icons -> https://pushe.co/docs/api/#api_icon_notificaiton_table2
+					"btn_order": 0,
 				},
 			},
 		},
