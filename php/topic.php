@@ -2,6 +2,8 @@
 
 $TOKEN = "YOUR_TOKEN";
 
+
+// only supported for Android
 $data = array(
     "app_ids" => ["YOUR_APPLICATION_ID"],
     "data" => array(
