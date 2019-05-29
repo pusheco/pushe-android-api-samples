@@ -28,7 +28,7 @@ import (
 func main() {
 
 	// obtain token -> https://pushe.co/docs/api/#api_get_token
-	const token = "2746e8cf5ebe571670166ed84621a5c15b13bb2a"
+	const token = "YOUR_TOKEN"
 
 	// Documentation :  (android) https://pushe.co/docs/api/#api_send_push_notification_to_single_users
 	// 					(web) https://pushe.co/docs/webpush-api/#api_send_push_notification_according_to_device_id
@@ -37,7 +37,7 @@ func main() {
 	// ********************* For Android ********************
 	// ******************************************************
 	IMEIFilteredData := map[string]interface{}{
-		"app_ids": []string{"co.pushe.apushe163test"}, // a list of app_id, like: [app_id_1 , ...] (compulsive)
+		"app_ids": []string{"YOUR_APP_ID"}, // a list of app_id, like: [app_id_1 , ...] (compulsive)
 		// send notification to all my android(web) applications
 		// "app_ids":  []string{"__all__"}
 		"platform": 1, // optional for android,

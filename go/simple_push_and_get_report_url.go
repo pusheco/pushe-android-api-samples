@@ -28,11 +28,11 @@ import (
 func main() {
 
 	// obtain token -> https://pushe.co/docs/api/#api_get_token
-	const token = "2746e8cf5ebe571670166ed84621a5c15b13bb2a"
+	const token = "YOUR_TOKEN"
 
 	reqData := map[string]interface{}{
-		"app_ids":  []string{"co.pushe.apushe163test"}, // a list of app_id, like: [app_id_1 , ...]
-		"platform": 1,                                  // optional for android,
+		"app_ids":  []string{"YOUR_APP_ID"}, // a list of app_id, like: [app_id_1 , ...]
+		"platform": 1,                       // optional for android,
 		// "platform": 2, for web (compulsive for web)
 		"data": map[string]interface{}{
 			"title":   "This is a simple push",         // (compulsive)
