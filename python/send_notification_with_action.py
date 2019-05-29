@@ -55,6 +55,7 @@ data = {
                 'url': ''
             },
             'btn_content': 'content',
+            # 'btn_icon' only support in Android
             'btn_icon': 'open_in_browser',  # icons -> https: //pushe.co/docs/api/#api_icon_notificaiton_table2
             'btn_order': 0,
         }

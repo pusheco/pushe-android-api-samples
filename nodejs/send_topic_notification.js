@@ -23,7 +23,8 @@ request.post(
             "data": {
                 "title": "This ia the title", // (compulsive)
                 "content": "This is the content", // (compulsive)
-            }
+            },
+            "topics": ["TOPIC_1", "TOPIC_2"]
         }),
     },
     function (error, response, body) {

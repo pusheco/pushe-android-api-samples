@@ -23,6 +23,28 @@ request.post(
             "data": {
                 "title": "This ia the title", // (compulsive)
                 "content": "This is the content", // (compulsive)
+                // for web we only support open link action
+                // Documentation : https://pushe.co/docs/webpush-api/#webpush_api_action_type_table2
+
+                // open link action
+                "action": {
+                    "action_type": "U",
+                    "url": "https://pushe.co"
+                },
+                "buttons": [
+                    {
+                        'btn_action': {
+                            'action_data': 'ActivityName',
+                            'action_type': 'T',
+                            'market_package_name': '',
+                            'url': ''
+                        },
+                        'btn_content': 'content',
+                        // btn_icon only support for android
+                        'btn_icon': 'open_in_browser',  // icons -> https: //pushe.co/docs/api/#api_icon_notificaiton_table2
+                        'btn_order': 0,
+                    }
+                ]
             }
         }),
     },

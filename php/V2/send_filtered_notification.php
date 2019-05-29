@@ -18,49 +18,8 @@
 // obtain token -> https://pushe.co/docs/api/#api_get_token
 $TOKEN = "YOUR_TOKEN";
 
-
-// ******************************************************
-// ***************** filtered with imei *****************
-// ********************* For Android ********************
-// ******************************************************
-// Documentation: https://pushe.co/docs/api/#api_send_push_notification_to_single_users
-
-$imei_filtered_data = array(
-    "app_ids" => ["APP_ID_1",],
-    "platform" => 1, // optional for android
-    "data" => array(
-        "title" => "this is the title",
-        "content" => "this is the content",
-        // extra parameters on Documentation -> https://pushe.co/docs/api/#api_send_advance_notification
-    ),
-    // filters with imei
-    "filter" => array(
-        "imei" => [
-            "12**********56", // something like this (deprecated)
-        ],
-    ),
-);
-
-// initialize curl
-$ch = curl_init("https://api.pushe.co/v2/messaging/notifications/");
-
-// set header parameters
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-    "Content-Type: application/json",
-    "Accept: application/json",
-    "Authorization: Token " . $TOKEN,
-));
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-// set data
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($imei_filtered_data));
-
-$imei_response = curl_exec($ch);
-
-echo "imei_response \n";
-print_r($imei_response);
-
+// Documentation :  (android) https://pushe.co/docs/api/#api_send_push_notification_to_single_users
+// 					(web) https://pushe.co/docs/webpush-api/#api_send_push_notification_according_to_device_id
 // ******************************************************
 // **************** filtered with pushe_id **************
 // ********************* For Android ********************
