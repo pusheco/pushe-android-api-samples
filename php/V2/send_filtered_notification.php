@@ -1,10 +1,5 @@
 <?php
 
-/* this notification will be sent to only 2 users
- * 1. user with imei=1234567890123456
- * 2. user with pushe_id=pid_20aa-ba40-a0
- */
-
 /* get user pushe_id with this function in your application:
     ** Android **
   // java code //
@@ -20,28 +15,28 @@
             console.log(`deviceId is: ${deviceId}`);
         });
 */
-
-$TOKEN = "2746e8cf5ebe571670166ed84621a5c15b13bb2a";
-// Documentation: https://pushe.co/docs/api/#api_send_push_notification_to_single_users
+// obtain token -> https://pushe.co/docs/api/#api_get_token
+$TOKEN = "YOUR_TOKEN";
 
 
 // ******************************************************
 // ***************** filtered with imei *****************
 // ********************* For Android ********************
 // ******************************************************
+// Documentation: https://pushe.co/docs/api/#api_send_push_notification_to_single_users
+
 $imei_filtered_data = array(
     "app_ids" => ["APP_ID_1",],
     "platform" => 1, // optional for android
     "data" => array(
         "title" => "this is the title",
         "content" => "this is the content",
-        // extra parameters on Documentation
+        // extra parameters on Documentation -> https://pushe.co/docs/api/#api_send_advance_notification
     ),
     // filters with imei
     "filter" => array(
         "imei" => [
-            "12**********56", // something like this
-            "pid_**********", // something like this
+            "12**********56", // something like this (deprecated)
         ],
     ),
 );

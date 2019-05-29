@@ -1,14 +1,15 @@
+# python 3.6
+
 import requests
 
-
-TOKEN = 'YOUR_TOKEN'
+TOKEN = '2746e8cf5ebe571670166ed84621a5c15b13bb2a'
 
 headers = {
     'Authorization': 'Token ' + TOKEN
 }
 
 data = {
-    'app_ids': ['YOUR_APPLICATION_ID', ],
+    'app_ids': ['co.pushe.apushe163test', ],
     'data': {
         'title': 'this is the title',
         'content': 'this is the content',

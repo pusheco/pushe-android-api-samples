@@ -16,10 +16,11 @@
         });
 */
 
-$TOKEN = "2746e8cf5ebe571670166ed84621a5c15b13bb2a";
+// obtain token -> https://pushe.co/docs/api/#api_get_token
+$TOKEN = "YOUR_TOKEN";
 
 $data = array(
-    "app_ids" => ["co.pushe.apushe163test",],
+    "app_ids" => ["YOUR_APP_1",],
     "platform" => 1, // optional for android
     // "platform" => 2 // for web
     "data" => array(

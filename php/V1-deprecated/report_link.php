@@ -2,7 +2,7 @@
 
 $TOKEN = "YOUR_TOKEN";
 
-/* send nofitcaion */
+/* send notification */
 $data = array(
   "applications" => ["YOUR_APPLICATION_ID", ],
   "notification" => array(
