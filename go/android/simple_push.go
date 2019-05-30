@@ -16,7 +16,6 @@ func main() {
     
 	reqData := map[string]interface{}{
 		"app_ids":  []string{"YOUR_APP_ID"},
-		"platform": 2,
 		"data": map[string]interface{}{
 			"title":   "This is a simple push",
 			"content": "All of your users will see me",

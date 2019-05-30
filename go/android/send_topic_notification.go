@@ -16,7 +16,6 @@ func main() {
 
 	reqData := map[string]interface{}{
 		"app_ids":  []string{"YOUR_APP_ID"},
-		"platform": 2,
 		"data": map[string]interface{}{
 			"title":   "This is a topic push",
 			"content": "Only users that subscribed to specified topics will see this notification",

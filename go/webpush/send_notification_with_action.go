@@ -16,7 +16,6 @@ func main() {
 	const token = "YOUR_TOKEN"
 
 	// Webpush -> https://pushe.co/docs/webpush-api/
-
 	reqData := map[string]interface{}{
 		"app_ids":  []string{"YOUR_APP_ID"},
 		"platform": 2,

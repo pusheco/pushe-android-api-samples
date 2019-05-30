@@ -16,31 +16,29 @@ func main() {
 
 	reqData := map[string]interface{}{
 		"app_ids":  []string{"YOUR_APP_ID"},
-		"platform": 2,
 		"data": map[string]interface{}{
 			"title":   "This is a simple push",
 			"content": "All of your users will see me",
 
-            // actions -> https://pushe.co/docs/api/#api_action_type_table3
-            "action": {
-                "action_type": "U",
-                "url": "https://pushe.co"
-            },
-
-            "buttons": [
-                {
-                    'btn_action': {
-                        'action_data': 'MyActivityName',
-                        'action_type': 'T',
-                        'market_package_name': '',
-                        'url': ''
-                    },
-                    'btn_content': 'Pushe',
-                     // More icons -> https: //pushe.co/docs/api/#api_icon_notificaiton_table2
-                    'btn_icon': 'open_in_browser',
-                    'btn_order': 0,
-                }
-            ]
+			// actions -> https://pushe.co/docs/api/#api_action_type_table3
+			"action": map[string]interface{}{
+				"action_type": "U",
+				"url":         "https://pushe.co",
+			},
+			"buttons": []map[string]interface{}{
+				{
+					"btn_content": "Pushe",
+					"btn_action": map[string]interface{}{
+						"action_data":         "MyActivityName",
+						"action_type":         "T",
+						"market_package_name": "",
+						"url":                 "",
+					},
+					// More icons -> https: //pushe.co/docs/api/#api_icon_notificaiton_table2
+					"btn_icon":  "open_in_browser",
+					"btn_order": 0,
+				},
+			},
 		},
 		// additional keywords -> https://pushe.co/docs/api/#api_send_advance_notification
 	}
