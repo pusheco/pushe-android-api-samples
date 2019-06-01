@@ -14,7 +14,7 @@ request.post(
             "Authorization": "Token " + TOKEN,
         },
         body: JSON.stringify({
-            "app_ids": ["TOUR_APP_ID"],
+            "app_ids": ["YOUR_APP_ID"],
             "data": {
                 "title": "This is a filtered push",
                 "content": "Only users with specified pushe_id(s) will see this notification.",
