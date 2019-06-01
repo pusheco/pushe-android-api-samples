@@ -7,63 +7,79 @@ import (
 	"net/http"
 )
 
-const token = "YOUR_TOKEN"
-
 func main() {
+
+	// Obtain token -> https://pushe.co/docs/api/#api_get_token
+	const token = "YOUR_TOKEN"
+
+    // Android doc -> https://pushe.co/docs/api/
+    
 	reqData := map[string]interface{}{
-		"app_ids": []string{"YOUR_APPLICATION_ID"},
+		"app_ids":  []string{"YOUR_APP_ID"},
 		"data": map[string]interface{}{
 			"title":   "This is a simple push",
 			"content": "All of your users will see me",
 		},
+		// additional keywords -> https://pushe.co/docs/api/#api_send_advance_notification
 	}
 
+	// Marshal returns the JSON encoding of reqData.
 	reqJSON, err := json.Marshal(reqData)
 
+	// check encoded json
 	if err != nil {
 		fmt.Println("json:", err)
 		return
 	}
 
-	req, err := http.NewRequest(
+	// create request obj
+	request, err := http.NewRequest(
 		http.MethodPost,
 		"https://api.pushe.co/v2/messaging/notifications/",
 		bytes.NewBuffer(reqJSON),
 	)
-	req.Header.Add("Content-Type", "application/json")
-	req.Header.Add("Accept", "application/json")
-	req.Header.Add("Authorization", "Token "+token)
 
+	// check request
 	if err != nil {
 		fmt.Println("Req error:", err)
 		return
 	}
 
-	client := http.Client{}
-	resp, err := client.Do(req)
+	// set header
+	request.Header.Set("Content-Type", "application/json")
+	request.Header.Set("Accept", "application/json")
+	request.Header.Set("Authorization", "Token "+token)
 
+	// send request and get response
+	client := http.Client{}
+	response, err := client.Do(request)
+
+	// check response
 	if err != nil {
 		fmt.Println("Resp error:", err)
 		return
 	}
-	defer resp.Body.Close()
 
+	defer response.Body.Close()
+
+	// check status_code and response
 	buf := new(bytes.Buffer)
-	buf.ReadFrom(resp.Body)
+	_, _ = buf.ReadFrom(response.Body)
 	respContent := buf.String()
 
-	fmt.Println("status code =>", resp.StatusCode)
+	fmt.Println("status code =>", response.StatusCode)
 	fmt.Println("response =>", respContent)
 	fmt.Println("==========")
 
-	if resp.StatusCode == http.StatusCreated {
+	if response.StatusCode == http.StatusCreated {
 		fmt.Println("success!")
 
 		var respData map[string]interface{}
-		json.Unmarshal(buf.Bytes(), &respData)
+		_ = json.Unmarshal(buf.Bytes(), &respData)
 
 		var reportURL string
 
+		// hashed_id just generated for Non-Free plan
 		if respData["hashed_id"] != nil {
 			reportURL = "https://pushe.co/report?id=" + respData["hashed_id"].(string)
 		} else {

@@ -2,12 +2,16 @@
 
 $TOKEN = "YOUR_TOKEN";
 
+// Android -> https://pushe.co/docs/api/
+
 $data = array(
-    "app_ids" => ["YOUR_APPLICATION_ID"],
-    "custom_content" => array(
-        "key" => "value",
-        "key2" => "value2",
+    "app_ids" => ["YOUR_APP_ID"],
+    "data" => array(
+        "title" => "This is a simple push with icon",
+        "content" => "All of your users will see me",
+        "icon" => "http://static.pushe.co/emails/images/logo.png"
     ),
+    // additional keywords -> https://pushe.co/docs/api/#api_send_advance_notification
 );
 
 $ch = curl_init("https://api.pushe.co/v2/messaging/notifications/");

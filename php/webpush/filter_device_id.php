@@ -1,16 +1,21 @@
 <?php
 
+// More info about device_id:
+//    (web): https://pushe.co/docs/webpush/#unique_id
+
 $TOKEN = "YOUR_TOKEN";
 
 $data = array(
-    "app_ids" => ["YOUR_APPLICATION_ID"],
+    "app_ids" => ["YOUR_APP_ID",],
+    "platform" => 2,
     "data" => array(
-        "title" => "This push is filtered by pushe_id",
-        "content" => "Only choosen users can see me",
+        "title" => "this is the title",
+        "content" => "this is the content",
     ),
-    "filters" => array(
-        "pushe_id" => ["PUSHE_ID"],
+    "filter" => array(
+        "device_id" => ["DEVICE_ID_1",]
     ),
+    // additional keywords -> https://pushe.co/docs/api/#api_send_advance_notification
 );
 
 $ch = curl_init("https://api.pushe.co/v2/messaging/notifications/");

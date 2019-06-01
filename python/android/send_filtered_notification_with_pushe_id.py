@@ -1,18 +1,28 @@
+#!/usr/bin/env python
+# vim: ts=4 sw=4 et
+
 import requests
 
-
+# Obtain token -> https://pushe.co/docs/api/#api_get_token
 TOKEN = 'YOUR_TOKEN'
 
+# set header
 headers = {
-    'Authorization': 'Token ' + TOKEN
+    'Authorization': 'Token ' + TOKEN,
+    'Content-Type': 'application/json'
 }
 
+# Android -> https://pushe.co/docs/api/
+
 data = {
-    'app_ids': ['YOUR_APPLICATION_ID', ],
+    'app_ids': ['YOUR_APP_ID', ],
     'data': {
         'title': 'this is the title',
         'content': 'this is the content',
-    }
+    },
+    'filters': {
+        'pushe_id': ['pid-********', 'pid-********']
+    },
 }
 
 response = requests.post(
@@ -30,6 +40,7 @@ if response.status_code == 201:
 
     data = response.json()
 
+    # hashed_id just generated for Non-Free plan
     if data['hashed_id']:
         report_url = 'https://pushe.co/report?id=%s' % data['hashed_id']
     else:

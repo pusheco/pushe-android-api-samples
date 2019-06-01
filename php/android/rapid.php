@@ -2,8 +2,10 @@
 
 $TOKEN = "YOUR_TOKEN";
 
+// Android -> https://pushe.co/docs/api/
+
 $data = array(
-    "app_id" => "YOUR_APPLICATION_ID",
+    "app_id" => "YOUR_APP_ID",
     "data" => array(
         "title" => "This is a rapid push",
         "content" => "go go go!",

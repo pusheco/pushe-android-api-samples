@@ -2,15 +2,15 @@
 
 $TOKEN = "YOUR_TOKEN";
 
+// Android -> https://pushe.co/docs/api/
+
 $data = array(
-    "app_ids" => ["YOUR_APPLICATION_ID"],
+    "app_ids" => ["YOUR_APP_ID"],
     "data" => array(
-        "title" => "This push is filtered by pushe_id",
-        "content" => "Only choosen users can see me",
+        "title" => "This push is a topic push",
+        "content" => "Only users already subscribed to topic can see me",
     ),
-    "filters" => array(
-        "device_id" => ["DEVICE_ID"],
-    ),
+    "topics" => ["TOPIC_NAME"],
 );
 
 $ch = curl_init("https://api.pushe.co/v2/messaging/notifications/");

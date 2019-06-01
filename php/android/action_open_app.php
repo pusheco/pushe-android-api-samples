@@ -2,13 +2,19 @@
 
 $TOKEN = "YOUR_TOKEN";
 
+// Android -> https://pushe.co/docs/api/
+
 $data = array(
-    "app_ids" => ["YOUR_APPLICATION_ID"],
+    "app_ids" => ["YOUR_APP_ID"],
     "data" => array(
-        "title" => "This push is a topic push",
-        "content" => "Only users already subscribed to topic can see me",
+        "title" => "Click on me!",
+        "content" => "I will open app",
+        "action" => array(
+            "url" => "",
+            "action_type" => "A"
+        ),
     ),
-    "topics" => ["TOPIC_NAME"],
+    // additional keywords -> https://pushe.co/docs/api/#api_send_advance_notification
 );
 
 $ch = curl_init("https://api.pushe.co/v2/messaging/notifications/");

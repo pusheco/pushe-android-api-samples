@@ -3,11 +3,10 @@
 $TOKEN = "YOUR_TOKEN";
 
 $data = array(
-    "app_ids" => ["YOUR_APPLICATION_ID"],
-    "data" => array(
-        "title" => "This is a simple push with icon",
-        "content" => "All of your users will see me",
-        "icon" => "http://static.pushe.co/emails/images/logo.png"
+    "app_ids" => ["YOUR_APP_ID"],
+    "custom_content" => array(
+        "key" => "value",
+        "key2" => "value2",
     ),
 );
 

@@ -1,6 +1,11 @@
 var request = require('request');
 
+// More info about device_id:
+//    (web): https://pushe.co/docs/webpush/#unique_id
+
 var TOKEN = "YOUR_TOKEN";
+
+// Webpush -> https://pushe.co/docs/webpush-api/
 
 request.post(
     {
@@ -12,18 +17,23 @@ request.post(
             "Authorization": "Token " + TOKEN,
         },
         body: JSON.stringify({
-            "app_ids": ["YOUR_APPLICATION_ID"],
+            "app_ids": ["YOUR_APP_ID"],
+            "platform": 2,
             "data": {
-                "title": "This ia the title",
-                "content": "This is the content",
+                "title": "This is a filtered push",
+                "content": "Only users with specified device_id(s) will see this notification.",
+            },
+            "filters": {
+                "device_id": ["DEVICE_ID_1", "DEVICE_ID_2"]
             }
+            // additional keywords -> https://pushe.co/docs/webpush-api/#api_advance_notification_table1
         }),
     },
-    function(error, response, body) {
+    function (error, response, body) {
         console.log("status_code: " + response.statusCode);
         console.log("response: " + body);
 
-        if (response.statusCode == 201){
+        if (response.statusCode == 201) {
             console.log("Success!");
 
             var data = JSON.parse(body);
