@@ -13,7 +13,7 @@ headers = {
 }
 
 data = {
-    'app_ids': ['APP_ID_1', ],
+    'app_ids': ['YOUR_APP_ID', ],
     'platform': 2, 
     'data': {
         'title': 'this is the title',

@@ -15,7 +15,7 @@ headers = {
 # Android -> https://pushe.co/docs/api/
 
 data = {
-    'app_ids': ['APP_ID_1', ],
+    'app_ids': ['YOUR_APP_ID', ],
     'data': {
         'title': 'this is the title',
         'content': 'this is the content',
