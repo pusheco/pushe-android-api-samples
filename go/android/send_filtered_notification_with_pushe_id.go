@@ -14,7 +14,7 @@ func main() {
 
 	// Android -> https://pushe.co/docs/api/
 
-	PusheIdFilteredData := map[string]interface{}{
+	data := map[string]interface{}{
     	"app_ids": []string{"YOUR_APP_ID"},
     	// send notification to all applications
         // "app_ids":  []string{"__all__"}
@@ -29,7 +29,7 @@ func main() {
     }
 
 	// Marshal returns the JSON encoding of reqData.
-	reqJSON, err := json.Marshal(PusheIdFilteredData)
+	reqJSON, err := json.Marshal(data)
 
 	// check encoded json
 	if err != nil {
