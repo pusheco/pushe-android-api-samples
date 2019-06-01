@@ -1,13 +1,11 @@
 <?php
 
-
-
 $TOKEN = "YOUR_TOKEN";
 
 // Webpush -> https://pushe.co/docs/webpush-api/
 
 $data = array(
-    "app_ids" => ["YOUR_APPLICATION_ID"],
+    "app_ids" => ["YOUR_APP_ID",],
     "platform" => 2,
     "data" => array(
         "title" => "This is a simple push with icon",

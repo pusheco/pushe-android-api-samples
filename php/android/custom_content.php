@@ -3,7 +3,7 @@
 $TOKEN = "YOUR_TOKEN";
 
 $data = array(
-    "app_ids" => ["YOUR_APPLICATION_ID"],
+    "app_ids" => ["YOUR_APP_ID"],
     "custom_content" => array(
         "key" => "value",
         "key2" => "value2",

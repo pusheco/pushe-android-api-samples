@@ -5,8 +5,8 @@
 
 $TOKEN = "YOUR_TOKEN";
 
-$pushe_id_filtered_data = array(
-    "app_ids" => ["YOUR_APPLICATION_ID",],
+$data = array(
+    "app_ids" => ["YOUR_APP_ID",],
     "platform" => 2,
     "data" => array(
         "title" => "this is the title",

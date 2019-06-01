@@ -5,7 +5,7 @@
 $TOKEN = "YOUR_TOKEN";
 
 $data = array(
-    "app_ids" => ["APP_ID_1",],
+    "app_ids" => ["YOUR_APP_ID",],
     "data" => array(
         "title" => "this is the title",
         "content" => "this is the content",

@@ -18,7 +18,7 @@ headers = {
 # Webpush -> https://pushe.co/docs/webpush-api/
 
 data = {
-    'app_ids': ['co.pushe.apushe163test', ],
+    'app_ids': ['YOUR_APP_ID', ],
     'platform': 2,
     'data': {
         'title': 'this is the title',

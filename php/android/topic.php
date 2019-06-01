@@ -5,7 +5,7 @@ $TOKEN = "YOUR_TOKEN";
 // Android -> https://pushe.co/docs/api/
 
 $data = array(
-    "app_ids" => ["YOUR_APPLICATION_ID"],
+    "app_ids" => ["YOUR_APP_ID"],
     "data" => array(
         "title" => "This push is a topic push",
         "content" => "Only users already subscribed to topic can see me",
