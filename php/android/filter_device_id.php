@@ -11,7 +11,7 @@ $data = array(
         "content" => "this is the content",
     ),
     // https://pushe.co/docs/api/#api_send_push_notification_to_single_users
-    "filter" => array(
+    "filters" => array(
         "device_id" => ["DEVICE_ID_1",],
     ),
     // additional keywords -> https://pushe.co/docs/api/#api_send_advance_notification
