@@ -10,7 +10,7 @@ $data = array(
         "title" => "this is the title",
         "content" => "this is the content",
     ),
-    "filter" => array(
+    "filters" => array(
         "device_id" => ["DEVICE_ID_1",],
     ),
     // additional keywords -> https://pushe.co/docs/api/#api_send_advance_notification
