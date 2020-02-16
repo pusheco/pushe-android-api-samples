@@ -25,7 +25,6 @@ func main() {
 		"filters": map[string]interface{}{
 			"device_id": []string{"DEVICE_ID_1","DEVICE_ID_2"},
 		},
-		// additional keywords -> https://pushe.co/docs/api/#api_send_advance_notification
 	}
 
 	// Marshal returns the JSON encoding of reqData.

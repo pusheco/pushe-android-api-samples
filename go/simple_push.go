@@ -20,7 +20,6 @@ func main() {
 			"title":   "This is a simple notification",
 			"content": "Content",
 		},
-		// additional keywords -> https://pushe.co/docs/api/#api_send_advance_notification
 	}
 
 	// Marshal returns the JSON encoding of reqData.

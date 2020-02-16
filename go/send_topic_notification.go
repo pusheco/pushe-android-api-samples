@@ -21,7 +21,6 @@ func main() {
 			"content": "Only users that subscribed to specified topics will see this notification",
 		},
 		"topics": []string{"TOPIC_1", "TOPIC_2"},
-		// additional keywords -> https://pushe.co/docs/api/#api_send_advance_notification
 	}
 
 	// Marshal returns the JSON encoding of reqData.
