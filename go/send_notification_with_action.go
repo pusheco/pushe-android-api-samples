@@ -9,10 +9,13 @@ import (
 
 func main() {
 
-	// Obtain token -> http://docs.pushe.co/docs/web-api/authentication/
+	// Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 	const token = "YOUR_TOKEN"
 
-	// Android doc -> http://docs.pushe.co/docs/web-api/send_notification/
+	// Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+    
+    // In order to send a notification to iOS applications use this url
+    // https://api.pushe.co/v2/messaging/notifications/ios
 
 	reqData := map[string]interface{}{
 		"app_ids":  []string{"YOUR_APP_ID"},

@@ -1,7 +1,7 @@
 <?php
 
-// Android doc -> http://docs.pushe.co/docs/web-api/send_notification/
-// Obtain token -> http://docs.pushe.co/docs/web-api/authentication/
+// Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+// Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 $TOKEN = "YOUR_TOKEN";
 
 $data = array(
@@ -14,6 +14,8 @@ $data = array(
 
 // initialize curl
 $ch = curl_init("https://api.pushe.co/v2/messaging/notifications/");
+// In order to send a notification to iOS applications use this url
+// https://api.pushe.co/v2/messaging/notifications/ios
 
 // set header parameters
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(

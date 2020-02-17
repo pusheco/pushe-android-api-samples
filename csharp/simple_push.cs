@@ -10,8 +10,8 @@ namespace csharp
 {
     class Program
     {
-        // Android doc -> http://docs.pushe.co/docs/web-api/send_notification/
-        // Obtain token -> http://docs.pushe.co/docs/web-api/authentication/
+        // Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+        // Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
         static String token = "YOUR_TOKEN";
 
         static void Main(string[] args)
@@ -28,6 +28,8 @@ namespace csharp
                 "https://api.pushe.co/v2/messaging/notifications/",
                 getNotificationData()
             );
+            // In order to send a notification to iOS applications use this url
+            // https://api.pushe.co/v2/messaging/notifications/ios
 
             var status_code = (int)response.StatusCode;
             var reponse_json = JObject.Parse(await response.Content.ReadAsStringAsync());

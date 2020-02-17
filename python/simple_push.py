@@ -3,7 +3,7 @@
 
 import requests
 
-# obtain token -> https://pushe.co/docs/api/#api_get_token
+# Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 TOKEN = 'YOUR_TOKEN'
 
 # set header
@@ -12,7 +12,7 @@ headers = {
     'Content-Type': 'application/json'
 }
 
-# Android -> https://pushe.co/docs/api/
+# Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
 
 data = {
     'app_ids': ['YOUR_APP_ID', ],
@@ -28,6 +28,8 @@ response = requests.post(
     json=data,
     headers=headers,
 )
+# In order to send a notification to iOS applications use this url
+# https://api.pushe.co/v2/messaging/notifications/ios
 
 # get status_code and response
 print('status code => ', response.status_code)

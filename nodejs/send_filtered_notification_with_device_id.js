@@ -1,9 +1,13 @@
 var request = require('request');
 
-// Obtain token -> http://docs.pushe.co/docs/web-api/authentication/
+// Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 var TOKEN = "YOUR_TOKEN";
 
-// Android doc -> http://docs.pushe.co/docs/web-api/send_notification/
+// Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+
+// In order to send a notification to iOS applications use this url
+// https://api.pushe.co/v2/messaging/notifications/ios
+
 request.post(
     {
         uri: "https://api.pushe.co/v2/messaging/notifications/",
