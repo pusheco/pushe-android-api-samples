@@ -12,7 +12,7 @@ headers = {
     'Content-Type': 'application/json'
 }
 
-# Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+# Android doc -> http://docs.pushe.co/docs/mobile-api/topic-notification/
 
 data = {
     'app_ids': ['YOUR_APP_ID', ],
