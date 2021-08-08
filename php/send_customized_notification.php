@@ -1,15 +1,20 @@
 <?php
 
-// Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+// Android doc -> http://docs.pushe.co/docs/mobile-api/customized-notification/
 // Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 $TOKEN = "YOUR_TOKEN";
 
 $data = array(
     "app_ids" => ["YOUR_APP_ID",],
     "data" => array(
-        "title" => "This is a simple notification",
-        "content" => "Content",
+        "title": 'سلام {{ name | کاربر }} عزیز',
+        "content":'به شما {{ discount | 10}} درصد تخفیف تعلق گرفت. '
     ),
+    "filters" => array(
+        "device_id" => array(
+            "device_id_1"
+        )
+    )
 );
 
 // initialize curl

@@ -12,15 +12,14 @@ headers = {
     'Content-Type': 'application/json'
 }
 
-# Android doc -> http://docs.pushe.co/docs/mobile-api/topic-notification/
+# Android doc -> http://docs.pushe.co/docs/mobile-api/simple-notification/
 
 data = {
     'app_ids': ['YOUR_APP_ID', ],
     'data': {
-        'title': 'This is a topic notification',
-        'content': 'Only users that subscribed to specified topics will see this notification',
-    },
-    'topics': ['TOPIC_1', 'TOPIC_2']
+        'title': 'This is a simple notification',
+        'content': 'Content',
+    }
 }
 
 # send request
@@ -30,7 +29,7 @@ response = requests.post(
     headers=headers,
 )
 # In order to send a notification to iOS applications use this url
-# https://api.pushe.co/v2/messaging/notifications/ios/
+# https://api.pushe.co/v2/messaging/notifications/ios
 
 # get status_code and response
 print('status code => ', response.status_code)

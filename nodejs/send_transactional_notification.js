@@ -3,14 +3,11 @@ var request = require('request');
 // Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 var TOKEN = "YOUR_TOKEN";
 
-// Android doc -> http://docs.pushe.co/docs/mobile-api/topic-notification/
-
-// In order to send a notification to iOS applications use this url
-// https://api.pushe.co/v2/messaging/notifications/ios
+// Android doc -> http://docs.pushe.co/docs/mobile-api/transactional-notification/
 
 request.post(
     {
-        uri: "https://api.pushe.co/v2/messaging/notifications/",
+        uri: "https://api.pushe.co/v2/messaging/rapid/",
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -20,11 +17,13 @@ request.post(
         body: JSON.stringify({
             "app_ids": ["YOUR_APP_ID"],
             "data": {
-                "title": "This is a topic notification",
-                "content": "Only users that subscribed to specified topics will see this notification",
+                "title": "This is a simple notification",
+                "content": "Content",
             },
-            "topics": ["TOPIC_1", "TOPIC_2"]
-            // additional keywords -> https://pushe.co/docs/api/#api_send_advance_notification
+            "device_id": [
+                'device_id_1', 
+                'device_id_2', 
+            ]
         }),
     },
     function (error, response, body) {
@@ -37,6 +36,7 @@ request.post(
             var data = JSON.parse(body);
             var report_url;
 
+            // report url only generated on Non-Free plan
             if (data.hashed_id) {
                 report_url = "https://pushe.co/report?id=" + data.hashed_id;
             } else {

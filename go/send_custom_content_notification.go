@@ -12,26 +12,21 @@ func main() {
 	// Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 	const token = "YOUR_TOKEN"
 
-	// Android -> http://docs.pushe.co/docs/mobile-api/send_notification/
-
+    // Android doc -> http://docs.pushe.co/docs/mobile-api/custom-content-notification/
+    
     // In order to send a notification to iOS applications use this url
     // https://api.pushe.co/v2/messaging/notifications/ios
     
-	data := map[string]interface{}{
-		"app_ids": []string{"YOUR_APP_ID"},
-		// send notification to all applications
-        // "app_ids":  []string{"__all__"}
-		"data": map[string]interface{}{
-			"title":   "This is a filtered push",
-			"content": "Only users with specified device_id(s) will see this notification.",
-		},
-		"filters": map[string]interface{}{
-			"device_id": []string{"DEVICE_ID_1","DEVICE_ID_2"},
-		},
+	reqData := map[string]interface{}{
+		"app_ids":  []string{"YOUR_APP_ID"},
+		"custom_content": map[string]string{
+            "key1": "value1",
+            "key2": "value2",
+    }
 	}
 
 	// Marshal returns the JSON encoding of reqData.
-	reqJSON, err := json.Marshal(data)
+	reqJSON, err := json.Marshal(reqData)
 
 	// check encoded json
 	if err != nil {

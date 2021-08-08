@@ -12,27 +12,26 @@ headers = {
     'Content-Type': 'application/json'
 }
 
-# Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+# Android doc -> http://docs.pushe.co/docs/mobile-api/custom-content-notification/
 
 data = {
     'app_ids': ['YOUR_APP_ID', ],
-    'data': {
-        'title': 'This is a filtered push',
-        'content': 'Only users with specified device_id(s) will see this notification.',
-    },
-    'filters': {
-        'device_id': ['DEIVCE_ID_1', 'DEVICE_ID_2']
-    },
+    'custom_content': {
+        'key1': 'value1',
+        'key2': 'value2'
+    }
 }
 
+# send request
 response = requests.post(
     'https://api.pushe.co/v2/messaging/notifications/',
     json=data,
     headers=headers,
 )
 # In order to send a notification to iOS applications use this url
-# https://api.pushe.co/v2/messaging/notifications/ios/
+# https://api.pushe.co/v2/messaging/notifications/ios
 
+# get status_code and response
 print('status code => ', response.status_code)
 print('response => ', response.json())
 print('==========')

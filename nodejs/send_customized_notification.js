@@ -3,7 +3,7 @@ var request = require('request');
 // Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 var TOKEN = "YOUR_TOKEN";
 
-// Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+// Android doc -> http://docs.pushe.co/docs/mobile-api/customized-notification/
 
 // In order to send a notification to iOS applications use this url
 // https://api.pushe.co/v2/messaging/notifications/ios
@@ -18,9 +18,12 @@ request.post(
         },
         body: JSON.stringify({
             "app_ids": ["YOUR_APP_ID"],
-            "data": {
-                "title": "This is a simple notification",
-                "content": "Content",
+            "data":{
+                "title": 'سلام {{ name | کاربر }} عزیز',
+                "content":'به شما {{ discount | 10}} درصد تخفیف تعلق گرفت.'
+            },
+            "filters": {
+                "device_id": ['device_id_1']
             }
         }),
     },

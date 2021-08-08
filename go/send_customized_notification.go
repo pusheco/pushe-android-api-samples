@@ -12,17 +12,20 @@ func main() {
 	// Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 	const token = "YOUR_TOKEN"
 
-    // Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+    // Android doc -> http://docs.pushe.co/docs/mobile-api/customized-notification/
     
     // In order to send a notification to iOS applications use this url
     // https://api.pushe.co/v2/messaging/notifications/ios
     
 	reqData := map[string]interface{}{
 		"app_ids":  []string{"YOUR_APP_ID"},
-		"data": map[string]interface{}{
-			"title":   "This is a simple notification",
-			"content": "Content",
-		},
+		"data": map[string]string{
+            "title": "سلام {{ name | کاربر }} عزیز",
+            "content":"به شما {{ discount | 10}} درصد تخفیف تعلق گرفت. "
+    },
+    "filters": map[string][]string{
+        "device_id": []string{"device_id_1"}
+    }
 	}
 
 	// Marshal returns the JSON encoding of reqData.

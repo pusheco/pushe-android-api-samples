@@ -12,48 +12,16 @@ func main() {
 	// Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 	const token = "YOUR_TOKEN"
 
-	// Android doc -> http://docs.pushe.co/docs/mobile-api/notification-actions/
+    // Android doc -> http://docs.pushe.co/docs/mobile-api/simple-notification/
     
     // In order to send a notification to iOS applications use this url
     // https://api.pushe.co/v2/messaging/notifications/ios
-
+    
 	reqData := map[string]interface{}{
 		"app_ids":  []string{"YOUR_APP_ID"},
 		"data": map[string]interface{}{
-			"title":   "This is a notification with buttons",
-			"content": "In this notification, every button has an action.",
-
-			// actions -> https://pushe.co/docs/api/#api_action_type_table3
-			"action": map[string]interface{}{
-				"action_type": "U",
-				"url":         "https://pushe.co",
-			},
-			"buttons": []map[string]interface{}{
-				{
-                    "btn_content": "Open App",
-                    "btn_action": map[string]interface{}{"action_type": "A"},
-                    "btn_order": 0,
-				},
-                {
-                    "btn_content": "Call",
-                    "btn_action": map[string]interface{}{
-                        "action_type": "U",
-                        "url": "tel:02187654321",
-                    },
-                    "btn_order": 1,
-				},
-                {
-                    "btn_content": "Install App",
-                    "btn_action": map[string]interface{}{
-                        "action_type": "U",
-                        "params": map[string]interface{}{"market": "bazaar", "package_name": "shop.barkat.app"},
-                        "url": "bazaar://details?id=shop.barkat.app",
-                        "market_package_name": "com.farsitel.bazaar",
-                    },
-                    "btn_icon": "add_box",
-                    "btn_order": 2,
-                },
-			},
+			"title":   "This is a simple notification",
+			"content": "Content",
 		},
 	}
 

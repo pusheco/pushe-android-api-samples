@@ -12,13 +12,18 @@ headers = {
     'Content-Type': 'application/json'
 }
 
-# Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+# Android doc -> http://docs.pushe.co/docs/mobile-api/customized-notification/
 
 data = {
     'app_ids': ['YOUR_APP_ID', ],
     'data': {
-        'title': 'This is a simple notification',
-        'content': 'Content',
+        'title': 'سلام {{ name | کاربر }} عزیز',
+        'content': 'به شما {{ discount | 10}} درصد تخفیف تعلق گرفت.'
+    },
+    'filters': {
+        'device_id': [
+            'device_id_1'
+        ]
     }
 }
 
