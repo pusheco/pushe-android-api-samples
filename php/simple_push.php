@@ -1,6 +1,6 @@
 <?php
 
-// Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+// Android doc -> http://docs.pushe.co/docs/mobile-api/simple-notification/
 // Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 $TOKEN = "YOUR_TOKEN";
 
