@@ -12,7 +12,7 @@ headers = {
     'Content-Type': 'application/json'
 }
 
-# Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+# Android doc -> http://docs.pushe.co/docs/mobile-api/filtered-notification/
 
 data = {
     'app_ids': ['YOUR_APP_ID', ],
@@ -21,7 +21,9 @@ data = {
         'content': 'Only users with specified device_id(s) will see this notification.',
     },
     'filters': {
-        'device_id': ['DEIVCE_ID_1', 'DEVICE_ID_2']
+        'device_id': ['DEIVCE_ID_1', 'DEVICE_ID_2'],
+        "brand": ["samsung", "sony"], 
+        "app_version": ["1.0.1", "1.0.2"]
     },
 }
 
