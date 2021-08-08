@@ -12,7 +12,7 @@ func main() {
 	// Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 	const token = "YOUR_TOKEN"
 
-	// Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+	// Android doc -> http://docs.pushe.co/docs/mobile-api/notification-actions/
     
     // In order to send a notification to iOS applications use this url
     // https://api.pushe.co/v2/messaging/notifications/ios
