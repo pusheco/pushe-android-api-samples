@@ -17,9 +17,7 @@ $data = array(
 );
 
 // initialize curl
-$ch = curl_init("https://api.pushe.co/v2/messaging/notifications/rapid/");
-// In order to send a notification to iOS applications use this url
-// https://api.pushe.co/v2/messaging/notifications/ios
+$ch = curl_init("https://api.pushe.co/v2/messaging/rapid/");
 
 // set header parameters
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
