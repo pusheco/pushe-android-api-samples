@@ -12,7 +12,7 @@ func main() {
 	// Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 	const token = "YOUR_TOKEN"
 
-	// Android -> http://docs.pushe.co/docs/mobile-api/send_notification/
+	// Android -> http://docs.pushe.co/docs/mobile-api/filtered-notification/
 
     // In order to send a notification to iOS applications use this url
     // https://api.pushe.co/v2/messaging/notifications/ios
@@ -27,6 +27,8 @@ func main() {
 		},
 		"filters": map[string]interface{}{
 			"device_id": []string{"DEVICE_ID_1","DEVICE_ID_2"},
+			"brand": []string{"samsung", "sony"},
+            		"app_version": []string{"1.0.1", "1.0.2"}
 		},
 	}
 
