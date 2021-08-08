@@ -28,12 +28,10 @@ data = {
 
 # send request
 response = requests.post(
-    'https://api.pushe.co/v2/messaging/notifications/rapid/',
+    'https://api.pushe.co/v2/messaging/rapid/',
     json=data,
     headers=headers,
 )
-# In order to send a notification to iOS applications use this url
-# https://api.pushe.co/v2/messaging/notifications/ios
 
 # get status_code and response
 print('status code => ', response.status_code)
