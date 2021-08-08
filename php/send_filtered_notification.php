@@ -1,6 +1,6 @@
 <?php
 
-// Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+// Android doc -> http://docs.pushe.co/docs/mobile-api/filtered-notification/
 // Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 $TOKEN = "YOUR_TOKEN";
 
@@ -11,7 +11,9 @@ $data = array(
         "content" => "Only users with specified device_id(s) will see this notification.",
     ),
     "filters" => array(
-        "device_id" => ["DEVICE_ID_1","DEVICE_ID_2",],
+        "device_id" => array("DEVICE_ID_1","DEVICE_ID_2"),
+        "brand" => array("samsung", "sony")
+        "app_version" => array("1.0.1", "1.0.2")
     ),
 );
 
