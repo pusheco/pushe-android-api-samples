@@ -1,6 +1,6 @@
 <?php
 
-// Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+// Android doc -> http://docs.pushe.co/docs/mobile-api/topic-notification/
 // Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 $TOKEN = "YOUR_TOKEN";
 
@@ -10,7 +10,7 @@ $data = array(
         "title" => "This is a topic notification",
         "content" => "Only users already subscribed to topic can see me",
     ),
-    "topics" => ["TOPIC_1","TOPIC_2"],
+    "topics" => => array("TOPIC_1","TOPIC_2")
 );
 
 $ch = curl_init("https://api.pushe.co/v2/messaging/notifications/");
