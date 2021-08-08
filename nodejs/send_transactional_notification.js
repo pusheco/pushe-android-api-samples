@@ -5,11 +5,9 @@ var TOKEN = "YOUR_TOKEN";
 
 // Android doc -> http://docs.pushe.co/docs/mobile-api/transactional-notification/
 
-// In order to send a notification to iOS applications use this url
-// https://api.pushe.co/v2/messaging/notifications/ios
 request.post(
     {
-        uri: "https://api.pushe.co/v2/messaging/notifications/rapid/",
+        uri: "https://api.pushe.co/v2/messaging/rapid/",
         method: "POST",
         headers: {
             "Content-Type": "application/json",
