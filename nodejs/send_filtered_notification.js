@@ -3,7 +3,7 @@ var request = require('request');
 // Obtain token -> http://docs.pushe.co/docs/mobile-api/authentication/
 var TOKEN = "YOUR_TOKEN";
 
-// Android doc -> http://docs.pushe.co/docs/mobile-api/send_notification/
+// Android doc -> http://docs.pushe.co/docs/mobile-api/filtered-notification/
 
 // In order to send a notification to iOS applications use this url
 // https://api.pushe.co/v2/messaging/notifications/ios
@@ -24,7 +24,9 @@ request.post(
                 "content": "Only users with specified device_id(s) will see this notification.",
             },
             "filters": {
-                "device_id": ["DEVICE_ID_1", "DEVICE_ID_2"]
+                "device_id": ["DEVICE_ID_1", "DEVICE_ID_2"],
+                "brand": ['samsung', 'sony'],
+                "app_version": ['1.0.1', '1.0.2']
             }
         }),
     },
